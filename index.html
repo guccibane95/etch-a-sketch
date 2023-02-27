@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <script src="java.js" defer></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,21 @@
     <title>Etch-a-Sketch</title>
 </head>
 <body>
-    
+    <div id="container">
+        <div class="title">Etch-a-Sketch Pad</div>
+        <div class="content">
+            <div class="board"></div>
+            <div class="buttons">
+                <button value="black" onclick="changeColor(this.value)">Black</button>
+                <button value="white" onclick="changeColor(this.value)">White</button>
+                <button value="random" onclick="changeColor(this.value)">Random</button>
+                <button onclick="reset()">Reset</button>
+            </div>
+            <div class="input">
+                <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)"/>
+                <button>Set Size</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
